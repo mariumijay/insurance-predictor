@@ -3,7 +3,7 @@ import requests
 
 API_URL="http://127.0.0.1:8000/predict"
 
-st.write("App started successfully")
+#st.write("App started successfully")
 
 st.title("Insurance Predictor")
 
