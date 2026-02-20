@@ -1,5 +1,5 @@
 #Base Image
-FROM python=3.11-slim
+FROM python:3.11-slim
 
 #set working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 #Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-#cms to run your APP
-CMD ["python","run.py"]
+#cmd to run your APP
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
